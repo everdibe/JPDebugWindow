@@ -8,3 +8,6 @@
 #define JP_LOG_TO_WINDOW_NOTIFICATION_KEY @"JP_LOG_TO_WINDOW_NOTIFICATION_KEY"
 #define JPLogToWindow(...) \
 [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:JP_LOG_TO_WINDOW_NOTIFICATION_KEY object:[NSString stringWithFormat:__VA_ARGS__]]];
+#define JPLogToWindowAndConsole(...) \
+[[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:JP_LOG_TO_WINDOW_NOTIFICATION_KEY object:[NSString stringWithFormat:__VA_ARGS__]]]; \
+NSLog(__VA_ARGS__);

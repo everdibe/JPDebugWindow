@@ -67,6 +67,7 @@
 - (void)_onTimer:(NSTimer *)timer
 {
     JPLogToWindow(@"log from timer!");
+    JPLogToWindowAndConsole(@"log window and console from timer!");
 }
 
 - (void)_stopLogTimer:(id)sender
@@ -78,6 +79,7 @@
 - (void)_addLog:(id)sender
 {
     JPLogToWindow(@"log from button!");
+    JPLogToWindowAndConsole(@"log window and console from button!");
 }
 
 @end
